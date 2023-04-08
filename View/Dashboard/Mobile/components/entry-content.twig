@@ -1,0 +1,39 @@
+<div class="mobile-hello">
+	<div class="d-flex align-items-center profile-box w-100">
+		{% if current_page == routes.dashboard.children.home.uri %}
+			<button class="dropdown-toggle bg-transparent border-0 d-flex align-items-center justify-content-between w-100" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+				<img class="profile-pic" src="{{ session.avatar }}" alt=""/>
+				<h6>
+					<span class="not-bold">{{ good_day_message }}</span>,
+					{{ session.first_name }}</h6>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+				<li>
+					<a href="{{ routes.dashboard.children.profile.uri }}">
+						<i class="lni lni-user"></i>
+						Mon Profil
+					</a>
+				</li>
+				<li>
+					<a href="deconnexion" id="logout-btn">
+						<i class="lni lni-exit"></i>
+						Déconnexion
+					</a>
+				</li>
+			</ul>
+			<a class="mobile-menu-item" title="" href="{{ routes.dashboard.children.notifications.uri }}">
+				<i class='bx bx-bell'></i>
+			</a>
+		{% else %}
+			<div class="d-flex justify-content-between align-items-center w-100">
+				<button title="Revenir en arrière" id="goback-btn">
+					<i class='font-35 bx bx-chevron-left'></i>
+				</button>
+				<h6>{{ title }}</h6>
+				<a class="mobile-menu-item" title="" href="{{ routes.dashboard.children.notifications.uri }}">
+					<i class='bx bx-bell'></i>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</div>

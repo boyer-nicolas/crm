@@ -1,0 +1,73 @@
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Identité</h6>
+				</div>
+				<form action="#">
+					<div class="row">
+						<div class="col-xxl-6">
+							<div class="input-style-1 form-group">
+								<label>Prénom</label>
+								<input type="text" placeholder="Prénom" value="{{ user.first_name }}"/>
+							</div>
+						</div>
+						<div class="col-xxl-6">
+							<div class="input-style-1 form-group">
+								<label>Nom</label>
+								<input type="text" placeholder="Nom" value="{{ user.last_name }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Email</label>
+								<input type="email" placeholder="Email" value="{{ user.email }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Société</label>
+								<input type="text" placeholder="Société" value="{{ user.linked_company.name }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Téléphone</label>
+								<input type="number" placeholder="Téléphone" value="{{ user.phone }}"/>
+							</div>
+						</div>
+						<div class="col-12 mb-4">
+							<div>
+								<label for="formFile" class="form-label">Avatar</label>
+								<input class="form-control" type="file" id="formFile" value="{{ user.avatar }}"/>
+							</div>
+							<img width="50" height="50" src="{{ user.avatar }}" alt="Avatar">
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end card -->
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Cookies</h6>
+				</div>
+				<div class="col-12 mb-3">
+					<button id="prebannerBtn" class="main-btn primary-btn btn-hollow btn-hover w-100 prebanner">
+						Gérer les cookies
+					</button>
+				</div>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

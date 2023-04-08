@@ -1,0 +1,21 @@
+{% block content %}
+	<div class="row">
+		{% for subscription_type in routes.dashboard.children.subscriptions.sub_pages %}
+			<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+				<a href="{{ routes.dashboard.base }}{{ routes.dashboard.children.subscriptions.uri }}{{ subscription_type.uri }}" title="{{ subscription_type.title }}" class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ subscription_type.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">
+							{{ subscription_type.title }}
+						</h6>
+					</div>
+				</a>
+				<!-- End Icon Cart -->
+			</div>
+			<!-- End Col -->
+		{% endfor %}
+	</div>
+	<!-- End Row -->
+{% endblock %}

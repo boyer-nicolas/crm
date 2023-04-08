@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-around mt-3 mx-2 w-100">
+	<a title="Voir" href="{{ current_page }}?id={{ id }}"
+		class="btn primary-btn btn-md mx-2 d-flex justify-content-center align-items-center">
+		<i class='bx bxs-show'></i>
+	</a>
+	<a title="Modifier" href="javascript:void(0)"
+		class="btn primary-btn secondary-btn btn-md mx-2 d-flex justify-content-center align-items-center action-update-btn"
+		data-id="{{ id }}">
+		<i class='bx bxs-edit'></i>
+	</a>
+	<a title="Supprimer" href="javascript:void(0)"
+		class="btn primary-btn danger-btn btn-md mx-2 d-flex justify-content-center align-items-center action-delete-btn"
+		data-id="{{ id }}">
+		<i class='bx bxs-trash'></i>
+	</a>
+</div>

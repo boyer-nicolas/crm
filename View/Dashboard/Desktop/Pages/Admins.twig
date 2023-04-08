@@ -1,0 +1,7 @@
+{% block content %}
+	{% if single == false %}
+		{% include 'Pages/Admins/List.twig' %}
+	{% else %}
+		{% include 'Pages/Admins/Single.twig' %}
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,61 @@
+<!-- ======== sidebar-nav start =========== -->
+<aside class="sidebar-nav-wrapper">
+	<nav class="sidebar sidebar-nav flex-column">
+		<ul>
+			{% for route in routes %}
+				{% set bottom_items = 1 %}
+				{% for child in route.children %}
+					{% if session.role in child.has_access %}
+
+						{% if child.sidebar and child.sidebar == true %}
+							{% if child.mobile and child.mobile != false %}
+								{% if child.sub_pages %}
+									<li class="nav-item nav-item-has-children">
+										<div class="d-flex justify-content-center align-items-center mr-3">
+											<a href="{{ route.base ~ child.uri }}" {{ target ? 'target="_blank"' }} class="btn btn-toggle align-items-center rounded">
+												<span class="icon">
+													<i class="{{ child.icon }}" style="color: {{ child.accent_color }}"></i>
+												</span>
+												{{ child.title }}
+											</a>
+											<span title="Etendre la liste" role="button" class="w-40 text-end icon chevron-container collapsed mr-15" data-bs-toggle="collapse" data-bs-target="#{{ child.title|lower }}-collapse" aria-expanded="false">
+												<i class='bx bx-chevron-down'></i>
+											</span>
+										</div>
+										<div class="collapse" id="{{ child.title|lower }}-collapse">
+											<ul class="collapse dropdown-nav">
+												{% for sub_page in child.sub_pages %}
+													<li>
+														<a href="{{ route.base ~ child.uri ~ sub_page.uri }}">
+															<span class="icon">
+																<i class="{{ sub_page.icon }}" style="color: {{ sub_page.accent_color }}"></i>
+															</span>
+															<span class="text">{{ sub_page.title }}</span>
+														</a>
+													</li>
+												{% endfor %}
+											</ul>
+										</div>
+									</li>
+								{% else %}
+									<li class="nav-item">
+										<a href="{{ route.base ~ child.uri }}" {{ target ? 'target="_blank"' }}>
+											<span class="icon">
+												<i class="{{ child.icon }}" style="color: {{ child.accent_color }}"></i>
+											</span>
+											<span class="text">{{ child.title }}</span>
+										</a>
+									</li>
+
+								{% endif %}
+
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			{% endfor %}
+		</ul>
+	</nav>
+</aside>
+<div class="overlay"></div>
+<!-- ======== sidebar-nav end =========== -->

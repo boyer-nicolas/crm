@@ -1,0 +1,21 @@
+{% extends 'layouts/dashboard.twig' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-lg-12">
+			{% if single == false %}
+				{% include 'Pages/Companies/List.twig' %}
+			{% else %}
+				{% include 'Pages/Companies/Single.twig' %}
+			{% endif %}
+		</div>
+
+		<div class="d-none" id="add-company-form-contents">
+			{% include 'modules/forms/add-company.twig' %}
+		</div>
+	</div>
+	<!-- end row -->
+{% endblock %}
+{% block extra_scripts_after %}
+	<script src="/static/public/js/companies.min.js"></script>
+{% endblock %}

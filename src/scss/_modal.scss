@@ -1,0 +1,7 @@
+.swal2-styled.swal2-confirm {
+  background-color: $primary;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($primary, 0.5);
+  }
+}

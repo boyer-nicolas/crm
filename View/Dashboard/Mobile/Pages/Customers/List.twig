@@ -1,0 +1,83 @@
+<div class="w-100 mb-3 d-flex justify-content-center">
+	<button id="add-customer-btn" class="main-btn primary-btn btn-hover btn-md">
+		Ajouter un Nouveau Client
+	</button>
+</div>
+
+{% if customers is iterable %}
+	{% for customer in customers %}
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<div class="icon-card mb-20 flex-wrap mobile-table-card">
+				<div class="d-flex justify-content-between align-items-center w-100">
+					<div class="icon mr-0">
+						<img width="25" height="25" src="{{ customer.avatar }}" alt=""/>
+					</div>
+					<h3 class="text-bold">
+						{{ customer.first_name }}
+						{{ customer.last_name }}
+					</h3>
+					<div class="custom-control custom-checkbox cursor-pointer">
+						<input class="form-check-input custom-control-input" type="checkbox" name="multi-select-{{ customer.user_id }}" value="{{ customer.user_id }}"/>
+						<label class="form-check-label" for="multi-select-{{ customer.user_id }}"></label>
+					</div>
+				</div>
+				<div class="content w-100 mt-3">
+					<div class="row">
+						<div class="col">
+							<h6>
+								Email
+							</h6>
+						</div>
+						<div class="col">
+							<p>
+								{{ customer.email }}
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<h6>
+								Téléphone
+							</h6>
+						</div>
+						<div class="col">
+							<p>
+								{{ customer.phone }}
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<h6>
+								Société
+							</h6>
+						</div>
+						<div class="col">
+							<p>
+								{{ customer.company }}
+							</p>
+						</div>
+					</div>
+				</div>
+				{% include 'modules/tables/action.twig' %}
+			</div>
+		</div>
+	{% endfor %}
+{% else %}
+	<p>
+		{{ customers }}
+	</p>
+{% endif %}
+
+<div class="select-opts">
+	<div class="row d-flex justify-content-center bg-white py-3 position-fixed bottom-0">
+		<div class="col">
+			<button class="btn primary-btn btn-md mx-2" id="multiple-delete-users">
+				Supprimer
+				<span id="users-to-delete"></span>
+				Clients
+			</button>
+		</div>
+	</div>
+</div>
+{% include 'modules/pagination.twig' %}

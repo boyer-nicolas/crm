@@ -1,0 +1,100 @@
+{% block extra_stylesheets_after %}
+	<link rel="stylesheet" href="/static/public/css/prism.min.css">
+{% endblock %}
+
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.children.settings.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				{% if access_log is iterable %}
+					<h2 class="mb-3">Accès
+						<span class="badge bg-primary">{{ access_log_lines }}</span>
+					</h2>
+					<ul class="list-group">
+						{% set i = 1 %}
+						{% for log in access_log %}
+							<li class="list-group-item">
+
+								<ul class="list-group list-group-horizontal">
+									<li class="list-group-item bg-transparent border-0">{{ i }}</li>
+									<li class="list-group-item bg-transparent border-0">{{ log }}</li>
+								</ul>
+
+							</li>
+							{% set i = i + 1 %}
+						{% endfor %}
+					</ul>
+				{% else %}
+					<h2 class="mb-3">Accès</h2>
+					<p>{{ access_log }}</p>
+				{% endif %}
+			</div>
+			<div class="row mt-3">
+				{% if error_log is iterable %}
+					<table class="table rounded">
+						<thead>
+							<tr>
+								<th scope="col">Erreurs
+									<span class="badge bg-primary">{{ error_log_lines }}</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% set i = 1 %}
+							{% for log in error_log %}
+								<tr>
+									<td>
+										<div class="row d-flex flex-column">
+											{% if i == 1 %}
+												<div class="col mb-2">
+													<p>
+														<span class="badge bg-secondary">Dernier en date</span>
+													</p>
+												</div>
+											{% endif %}
+											<div class="col mb-2">
+												<p>
+													<span class="badge bg-secondary">Date</span>
+													: Le
+													{{ log.date }}</p>
+											</div>
+											<div class="col">
+												<p>
+													<span class="badge bg-secondary">Fichier</span>
+													:
+													<span>
+														<b>{{ log.file }}</b>
+													</span>
+													en ligne
+													<b>{{ log.line }}</b>
+												</p>
+											</div>
+											<div class="col">
+												<pre><code class="language-php">{{ log.message }}</code></pre>
+											</div>
+										</div>
+									</td>
+								</tr>
+								{% set i = i + 1 %}
+							{% endfor %}
+						</tbody>
+					</table>
+				{% else %}
+					<h2 class="mb-3">Erreurs</h2>
+					<p>{{ error_log }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% include "modules/pagination.twig" %}
+{% endblock %}
+{% block extra_scripts_after %}
+	<script src="/static/public/js/prism.min.js"></script>
+{% endblock %}

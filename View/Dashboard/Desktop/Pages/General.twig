@@ -1,0 +1,147 @@
+{% block content %}
+	<div class="row">
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.customers.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="bx bxs-group"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						Clients
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ customers }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.accounting.uri ~ routes.dashboard.children.accounting.sub_pages.invoices.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.accounting.sub_pages.invoices.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.accounting.sub_pages.invoices.title
+                        }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ invoices }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.accounting.uri ~ routes.dashboard.children.accounting.sub_pages.quotes.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.accounting.sub_pages.quotes.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.accounting.sub_pages.quotes.title
+                        }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ quotes }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.accounting.uri ~ routes.dashboard.children.accounting.sub_pages.deposits.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.accounting.sub_pages.deposits.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.accounting.sub_pages.deposits.title
+                        }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ deposits }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.companies.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.companies.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{ routes.dashboard.children.companies.title }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ companies }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.subscriptions.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.subscriptions.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{ routes.dashboard.children.subscriptions.title }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ subscriptions }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.prospects.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.prospects.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{ routes.dashboard.children.prospects.title }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ prospects }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.projects.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.base ~ routes.dashboard.children.projects.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{ routes.dashboard.children.projects.title }}
+					</h6>
+					<h3 class="text-bold mb-10">
+						{{ projects }}
+					</h3>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<!-- End Col -->
+	</div>
+	<!-- End Row -->
+{% endblock %}

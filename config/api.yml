@@ -1,0 +1,113 @@
+base: /api
+endpoints:
+  add_user:
+    uri: /add-user
+    method: POST
+    controller: "UserController"
+    action: "addUser"
+    static: false
+
+  get_page_content:
+    uri: /get-page-content
+    method: POST
+    controller: "PageController"
+    action: "getPageContent"
+    static: false
+
+  get_entry_content:
+    uri: /get-entry-content
+    method: POST
+    controller: "PageController"
+    action: "getEntryContent"
+    static: false
+
+  get_routes:
+    uri: /get-routes
+    method: GET
+    controller: "PageController"
+    action: "getRoutes"
+    static: false
+
+  login:
+    uri: /login
+    method: POST
+    controller: "UserController"
+    action: "login"
+    static: false
+
+  logout:
+    uri: /logout
+    method: POST
+    controller: "UserController"
+    action: "logout"
+    static: false
+
+  add_customer:
+    uri: /add-customer
+    method: POST
+    controller: "CustomerController"
+    action: "addCustomer"
+    static: false
+
+  delete_customer:
+    uri: /delete-customer
+    method: POST
+    controller: "CustomerController"
+    action: "deleteCustomer"
+    static: false
+
+  delete_multiple_customers:
+    uri: /delete-multiple-customers
+    method: POST
+    controller: "CustomerController"
+    action: "deleteMultipleCustomers"
+    static: false
+
+  edit_customer:
+    uri: /edit-customer
+    method: POST
+    controller: "CustomerController"
+    action: "editCustomer"
+    static: false
+
+  view_customer:
+    uri: /view-customer
+    method: POST
+    controller: "CustomerController"
+    action: "viewCustomer"
+    static: false
+
+  search_reindex:
+    uri: /search-reindex
+    method: POST
+    controller: "SearchController"
+    action: "reIndex"
+    static: false
+
+  search_clear_index:
+    uri: /search-clear-index
+    method: POST
+    controller: "SearchController"
+    action: "clearIndex"
+    static: false
+
+  search_fill_index:
+    uri: /search-fill-index
+    method: POST
+    controller: "SearchController"
+    action: "fillIndex"
+    static: false
+
+  last_error:
+    uri: /last-error
+    method: GET
+    controller: "ErrorController"
+    action: "lastError"
+    static: false
+
+  darkmode:
+    uri: /darkmode
+    method: POST
+    controller: "UiController"
+    action: "darkmode"
+    static: false

@@ -1,0 +1,23 @@
+<!-- end col -->
+<div class="col-md-6">
+    <div class="breadcrumb-wrapper mb-30">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ routes.dashboard.base }}">{{ env.APP_NAME }}</a>
+                </li>
+                {% for breadcrumb in breadcrumbs %}
+                    {% if breadcrumb is not empty %}
+                        {% if breadcrumb != 'admin' %}
+                            <li class="breadcrumb-item active"
+                                aria-current="page">
+                                {{ breadcrumb|capitalize }}
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- end col -->

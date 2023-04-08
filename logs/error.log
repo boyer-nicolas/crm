@@ -1,0 +1,150 @@
+The 25 05 2022 at 18:54:08 - Unable to find template "layouts/dashboard.twig" (looked into: /var/www/html/app/View/Landing) in "Pages/Login.twig" at line 1. in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 227
+The 25 05 2022 at 18:56:33 - Unable to find template "layouts/dashboard.twig" (looked into: /var/www/html/app/View/Landing) in "Pages/Login.twig" at line 1. in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 227
+The 25 05 2022 at 19:02:07 - The "/var/www/html/app/View/dashboardDesktop/" directory does not exist ("/var/www/html/app/View/dashboardDesktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 19:02:38 - The "/var/www/html/app/View/dashboard/Desktop/" directory does not exist ("/var/www/html/app/View/dashboard/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 19:20:38 - Class "Niwee\Trident\Controller\Dashboard\ViewController" not found in /var/www/html/app/Controller/Dashboard/DashboardController.php on line 11
+The 25 05 2022 at 19:20:39 - Class "Niwee\Trident\Controller\Dashboard\ViewController" not found in /var/www/html/app/Controller/Dashboard/DashboardController.php on line 11
+The 25 05 2022 at 19:20:50 - Class "\Niwee\Trident\Controller\Dashboard\DashboardController" not found in /var/www/html/app/Core/Router.php on line 132
+The 25 05 2022 at 19:29:09 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:09 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:10 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:10 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:23 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:23 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:26 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:27 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:29:47 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:29:47 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:29:48 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:29:48 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:29:48 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:29:49 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:30:02 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:30:02 - foreach() argument must be of type array|object, null given in /var/www/html/app/Core/Router.php on line 57
+The 25 05 2022 at 19:35:03 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 19:35:45 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 19:37:42 - Call to a member function get() on null in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 19:38:36 - Object of class Niwee\Trident\Core\Router could not be converted to string in /var/www/html/app/API/PageController.php on line 28
+The 25 05 2022 at 19:38:41 - Object of class Niwee\Trident\Core\Router could not be converted to string in /var/www/html/app/API/PageController.php on line 28
+The 25 05 2022 at 19:40:29 - in_array(): Argument #2 ($haystack) must be of type array, stdClass given in /var/www/html/app/Core/Router.php on line 69
+The 25 05 2022 at 19:46:33 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:47:00 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:48:04 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:48:16 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:48:40 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:48:45 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:49:07 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:49:13 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:49:59 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:50:24 - Undefined variable $route in /var/www/html/app/Core/Router.php on line 69
+The 25 05 2022 at 19:50:31 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 72
+The 25 05 2022 at 19:50:40 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 106
+The 25 05 2022 at 19:51:15 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:51:47 - Attempt to read property "uri" on array in /var/www/html/app/Core/Router.php on line 101
+The 25 05 2022 at 19:53:50 - Call to undefined method Niwee\Trident\Core\Router::get_route() in /var/www/html/app/API/PageController.php on line 30
+The 25 05 2022 at 19:54:21 - Call to a member function get() on null in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 19:54:47 - Call to a member function get() on null in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 19:54:52 - Call to a member function get() on null in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 19:55:00 - Call to a member function get() on null in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 19:56:02 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 19:56:18 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:00:10 - Undefined variable $data in /var/www/html/app/Controller/Dashboard/ViewController.php on line 69
+The 25 05 2022 at 20:00:23 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:00:25 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:01:04 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:01:13 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:01:15 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:01:57 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:01:59 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:02:13 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:02:38 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:02:44 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:03:43 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:03:44 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:04:09 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:04:10 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:04:41 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:04:51 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:04:52 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:00 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:01 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:02 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:05 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:06 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:19 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:05:21 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:06:04 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:06:22 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:06:24 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:06:31 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:06:32 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:07:11 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:07:41 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:07:42 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:07:49 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:07:51 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:08:52 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:08:53 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:09:26 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:09:49 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:09:50 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:11:02 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:11:37 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:11:45 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:12:37 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:12:50 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:13:13 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:14:00 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:14:34 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:15:03 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:15:08 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:15:28 - The "/var/www/html/app/View/Dashboard/proutDesktop/" directory does not exist ("/var/www/html/app/View/Dashboard/proutDesktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:15:33 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:17:54 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:18:49 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:19:10 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:19:25 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:19:39 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:19:54 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:20:23 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:23:44 - Niwee\Trident\Controller\Dashboard\DashboardController::__construct(): Argument #3 ($content) must be of type bool, null given, called in /var/www/html/app/Core/Router.php on line 140 in /var/www/html/app/Controller/Dashboard/DashboardController.php on line 13
+The 25 05 2022 at 20:23:45 - Niwee\Trident\Controller\Dashboard\DashboardController::__construct(): Argument #3 ($content) must be of type bool, null given, called in /var/www/html/app/Core/Router.php on line 140 in /var/www/html/app/Controller/Dashboard/DashboardController.php on line 13
+The 25 05 2022 at 20:23:50 - Niwee\Trident\Controller\Dashboard\DashboardController::__construct(): Argument #3 ($content) must be of type bool, null given, called in /var/www/html/app/Core/Router.php on line 140 in /var/www/html/app/Controller/Dashboard/DashboardController.php on line 13
+The 25 05 2022 at 20:28:08 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:28:31 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:28:43 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:28:55 - The "/var/www/html/app/View/Desktop/" directory does not exist ("/var/www/html/app/View/Desktop/"). in /var/www/html/app/vendor/twig/twig/src/Loader/FilesystemLoader.php on line 92
+The 25 05 2022 at 20:36:44 - Undefined property: stdClass::$has_access in /var/www/html/app/Core/Router.php on line 119
+The 25 05 2022 at 20:37:43 - Undefined property: stdClass::$has_access in /var/www/html/app/Core/Router.php on line 118
+The 25 05 2022 at 20:37:44 - Undefined property: stdClass::$has_access in /var/www/html/app/Core/Router.php on line 118
+The 25 05 2022 at 20:37:53 - Undefined property: stdClass::$has_access in /var/www/html/app/Core/Router.php on line 118
+The 25 05 2022 at 20:38:39 - Niwee\Trident\Core\Router::check_access(): Argument #1 ($route) must be of type object, string given, called in /var/www/html/app/Core/Router.php on line 66 in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 20:38:39 - Niwee\Trident\Core\Router::check_access(): Argument #1 ($route) must be of type object, string given, called in /var/www/html/app/Core/Router.php on line 66 in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 20:38:40 - Niwee\Trident\Core\Router::check_access(): Argument #1 ($route) must be of type object, string given, called in /var/www/html/app/Core/Router.php on line 66 in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 20:38:41 - Niwee\Trident\Core\Router::check_access(): Argument #1 ($route) must be of type object, string given, called in /var/www/html/app/Core/Router.php on line 66 in /var/www/html/app/Core/Router.php on line 113
+The 25 05 2022 at 20:38:46 - Class "Dashboard\SubscriptionsMaintenancesListController" not found in /var/www/html/app/API/PageController.php on line 70
+The 25 05 2022 at 20:38:48 - Class "Dashboard\DashboardController" not found in /var/www/html/app/API/PageController.php on line 70
+The 25 05 2022 at 20:38:50 - Class "Dashboard\SubscriptionsMaintenancesListController" not found in /var/www/html/app/API/PageController.php on line 70
+The 25 05 2022 at 20:38:56 - Class "Dashboard\SubscriptionsMaintenancesListController" not found in /var/www/html/app/API/PageController.php on line 70
+The 25 05 2022 at 21:26:35 - Call to undefined method Niwee\Trident\Core\Router::sendCorsHeaders() in /var/www/html/app/Core/Router.php on line 184
+The 25 05 2022 at 21:26:37 - Call to undefined method Niwee\Trident\Core\Router::sendCorsHeaders() in /var/www/html/app/Core/Router.php on line 184
+The 25 05 2022 at 21:34:40 - syntax error, unexpected token "}" in /var/www/html/app/API/PageController.php on line 85
+The 25 05 2022 at 21:34:57 - Call to undefined method Niwee\Trident\API\PageController::getPageContent() in /var/www/html/app/Core/Router.php on line 208
+The 25 05 2022 at 21:56:56 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:57:05 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:57:23 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:57:25 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:58:08 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:58:49 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:59:23 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:59:27 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 21:59:48 - Class "\Niwee\Trident\Controller\Dashboard\Profile\GeneralController" not found in /var/www/html/app/API/PageController.php on line 78
+The 25 05 2022 at 21:59:52 - Class "\Niwee\Trident\Controller\Dashboard\Profile\GeneralController" not found in /var/www/html/app/Core/Router.php on line 140
+The 25 05 2022 at 22:02:26 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 25 05 2022 at 22:02:35 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 28 05 2022 at 02:41:34 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 28 05 2022 at 02:41:43 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 29 05 2022 at 20:14:11 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 29 05 2022 at 20:23:44 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 29 05 2022 at 20:27:28 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76
+The 29 05 2022 at 20:31:52 - Attempt to read property "controller" on null in /var/www/html/app/API/PageController.php on line 76

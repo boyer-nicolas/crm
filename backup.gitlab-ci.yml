@@ -1,0 +1,28 @@
+image: alpine
+
+stages:
+  - test
+  - deploy
+
+before_script:
+  - apk update && apk add openssh sshpass curl git
+
+test:
+  stage: test
+  image: node:16
+  tags:
+    - php
+  script:
+    - npm install --global gulp
+    - yarn install
+    - yarn build
+
+deploy:
+  stage: deploy
+  environment:
+    name: Production
+    url: https://${PROD_URL}
+  tags:
+    - php
+  script:
+    - sshpass -p ${SSH_PASSWORD} ssh -oStrictHostKeyChecking=no -p ${SSH_PORT} ${SSH_USER}@${SSH_HOST} "source /home/niwee/.zshrc && cd ${SSH_DIRECTORY}/app && git fetch --all && git reset --hard && git clean -df && git pull || true && ./update.sh && yarn clean && yarn install && yarn build && cd .. && docker-compose down -v && docker-compose up -d"

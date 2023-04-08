@@ -1,0 +1,61 @@
+{
+  "name": "Trident byNiWee",
+  "short_name": "Trident",
+  "start_url": "/",
+  "background_color": "#fff",
+  "categories": [
+    "business",
+    "finance",
+    "productivity",
+    "utilities"
+  ],
+  "theme_color": "#006994",
+  "description": "Leads, Engagement, Abonnements.",
+  "display": "standalone",
+  "lang": "fr",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/public/images/logo/logo.svg",
+      "sizes": "any",
+      "purpose": "any",
+      "type": "image/svg",
+      "color_scheme": "light"
+    },
+    {
+      "src": "/public/images/logo/logo.png",
+      "sizes": "512x512",
+      "purpose": "any",
+      "type": "image/png",
+      "color_scheme": "light"
+    },
+    {
+      "src": "/public/images/logo/maskable.svg",
+      "sizes": "any",
+      "purpose": "maskable",
+      "type": "image/svg",
+      "color_scheme": "light"
+    },
+    {
+      "src": "/public/images/logo/logo-dark.svg",
+      "sizes": "any",
+      "purpose": "any",
+      "type": "image/svg",
+      "color_scheme": "dark"
+    },
+    {
+      "src": "/public/images/logo/logo.png",
+      "sizes": "512x512",
+      "purpose": "any",
+      "type": "image/png",
+      "color_scheme": "dark"
+    },
+    {
+      "src": "/public/images/logo/maskable-dark.svg",
+      "sizes": "any",
+      "purpose": "maskable",
+      "type": "image/svg",
+      "color_scheme": "dark"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+.client-cover {
+  img {
+    width                     : 100%;
+    height                    : 200px;
+    object-fit                : cover;
+    object-position           : center;
+    border-radius             : $radius;
+    box-shadow                : rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-bottom-left-radius : 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.client-profile-photo {
+  img {
+    background   : var(--body-bg);
+    border-radius: 50%;
+    margin-top   : -50px;
+    padding      : 15px;
+    margin-left  : 20px;
+    box-shadow   : rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}
+
+.client-profile-wrapper {
+  background   : var(--body-bg-accent);
+  border-radius: $radius;
+}
+
+.profile-social-icon {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+  i {
+    border-radius: 50%;
+    padding      : 18px;
+    background   : var(--body-bg);
+    box-shadow   : rgb(0 0 0 / 10%) 0px 4px 12px;
+    font-size    : 1.5rem;
+  }
+}

@@ -1,0 +1,31 @@
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Sécurité</h6>
+				</div>
+				<form action="#">
+					<div class="row">
+						<div class="col-12">
+							<ul class="buttons-group d-flex justify-content-between">
+								<a href="#0" class="main-btn danger-btn btn-hover">Changer mon mot de passe</a>
+								<a href="#0" class="main-btn primary-btn btn-hover">Mettre à jour mon profil</a>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

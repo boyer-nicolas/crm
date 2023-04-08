@@ -1,0 +1,155 @@
+{% extends 'layouts/dashboard.twig' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card-style mb-30">
+				<h6 class="mb-10">
+					{{ title }}
+				</h6>
+				<p class="text-sm mb-20">
+					Tous les projets que nous avons.
+				</p>
+				<div class="table-wrapper table-responsive pt-20">
+					{% if projects is iterable %}
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										<h6>
+											Type
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Nom
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Git
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Société
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Assigné à
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Date de création
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Date de Mise à jour
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Date de rendu souhaitée
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Action
+										</h6>
+									</th>
+								</tr>
+								<!-- end table row -->
+							</thead>
+							<tbody>
+								{% for project in projects %}
+									<tr>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.filters.filter_name
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.projects.project_name
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.projects.project_git_url
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.companies.company_name
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.users.user_first_name
+                                                }}
+												{{
+                                                    project.users.user_last_name
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.projects.project_created_at|date(
+                                                        '\\L\\e d/m/Y \\à H\\Hi',
+                                                        'Europe/Paris'
+                                                    )
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.projects.project_updated_at|date(
+                                                        '\\L\\e d/m/Y \\à H\\Hi',
+                                                        'Europe/Paris'
+                                                    )
+                                                }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{
+                                                    project.projects.project_due_date|date(
+                                                        '\\L\\e d/m/Y',
+                                                        'Europe/Paris'
+                                                    )
+                                                }}
+											</p>
+										</td>
+										{% include 'modules/tables/action.twig' %}
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					{% else %}
+						<p>
+							{{ data.projects }}
+						</p>
+					{% endif %}
+					<!-- end table -->
+				</div>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+{% endblock %}

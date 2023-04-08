@@ -1,0 +1,138 @@
+<div class="card-style mb-30">
+    <div class="d-flex justify-content-between">
+        <div>
+            <h6 class="mb-10">
+                Tous les clients enregistrés.
+            </h6>
+        </div>
+        <div>
+            <button id="add-customer-btn"
+                class="main-btn primary-btn btn-hover btn-md">
+                Ajouter un Client
+            </button>
+        </div>
+    </div>
+    <div class="table-wrapper table-responsive pt-20">
+        {% if customers is iterable %}
+            <table class="table" id="customers-table">
+                <thead>
+                    <tr>
+                        <th>
+                            <h6>
+                                ID
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Nom
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Email
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Téléphone
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Société
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Action
+                            </h6>
+                        </th>
+                    </tr>
+                    <!-- end table row -->
+                </thead>
+                <tbody>
+                    {% for customer in customers %}
+                        <tr>
+                            <td class="min-width cursor-pointer">
+                                <div class="custom-control custom-checkbox cursor-pointer">
+                                    <input class="form-check-input custom-control-input"
+                                        type="checkbox"
+                                        name="multi-select-{{
+                                        customer.user_id
+                                        }}"
+                                        value="{{ customer.user_id }}" />
+                                    <label class="form-check-label"
+                                        for="multi-select-{{
+                                        customer.user_id
+                                        }}">
+                                        {{ customer.user_id }}
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="min-width">
+                                <div class="lead">
+                                    <div class="lead-image">
+                                        <img width="25"
+                                            height="25"
+                                            src="{{ customer.avatar }}"
+                                            alt="" />
+                                    </div>
+                                    <div class="lead-text">
+                                        <p>
+                                            {{ customer.first_name }}
+                                            {{ customer.last_name }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="min-width">
+                                <p>
+                                    <a title="Envoyer un mail à {{
+                                        customer.first_name
+                                        }} {{ customer.last_name }}"
+                                        href="mailto:{{ customer.email }}">
+                                        {{ customer.email }}
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="min-width">
+                                <p>
+                                    <a title="Téléphoner à {{
+                                        customer.first_name
+                                        }} {{ customer.last_name }}"
+                                        href="tel:{{ customer.phone }}}}">
+                                        {{ customer.phone }}
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="min-width">
+                                <p>
+                                    {{ customer.company }}
+                                </p>
+                            </td>
+                            {% include 'modules/tables/action.twig' with {
+                                id: customer.user_id
+                            } %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>
+                {{ customers }}
+            </p>
+        {% endif %}
+        <!-- end table -->
+    </div>
+    <div class="select-opts">
+        <div class="row d-flex justify-content-center bg-white py-3 position-fixed bottom-0">
+            <div class="col">
+                <button class="btn primary-btn btn-md mx-2"
+                    id="multiple-delete-users">
+                    Supprimer <span id="users-to-delete"></span> Clients
+                </button>
+            </div>
+        </div>
+    </div>
+    {% include 'modules/pagination.twig' %}
+</div>

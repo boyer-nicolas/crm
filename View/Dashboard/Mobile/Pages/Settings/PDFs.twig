@@ -1,0 +1,77 @@
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.children.settings.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>PDFs</h6>
+				</div>
+				<form action="#">
+					<div class="row">
+						<div class="col-12">
+							<div class="mb-3">
+								<label for="pdf_accent_color" class="form-label">Couleur d'accent</label>
+								<input type="color" class="form-control form-control-color" id="pdf_accent_color" value="{{ params.settings.default_pdf_accent_color }}" title="Couleur d'accent">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Fuseau Horaire</label>
+								<input type="text" placeholder="Fuseau Horaire" value="{{ params.settings.default_pdf_tz }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Délai de paiement par défaut des factures (en semaines)</label>
+								<input type="number" placeholder="Délai de paiement par défaut des factures" value="{{ params.settings.default_pdf_invoice_due_after_weeks }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Préfix par défaut</label>
+								<input type="text" placeholder="Préfix par défaut" value="{{ params.settings.default_pdf_reference_prefix }}"/>
+							</div>
+						</div>
+						<div class="col-12 mb-4">
+							<div>
+								<label for="formFile" class="form-label">Logo par défaut</label>
+								<input class="form-control" type="file" id="formFile" value="{{ params.settings.default_pdf_logo }}"/>
+							</div>
+							<img width="250" height="250" src="{{ params.settings.default_pdf_logo }}" alt="Image par défaut">
+						</div>
+						<div class="col-12">
+							<div class="select-style-1">
+								<label>Société par défaut</label>
+								<div class="select-position">
+									<select class="light-bg">
+										<option value="{{ params.linked_company.id }}">{{ params.linked_company.name }}
+										</option>
+										{% if params.companies_available is iterable %}
+											{% for company in params.companies_available %}
+												<option value="{{ company.id }}">{{ company.name }}</option>
+											{% endfor %}
+										{% endif %}
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<button class="main-btn primary-btn btn-hover btn-hollow w-100">
+								Mettre à Jour
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

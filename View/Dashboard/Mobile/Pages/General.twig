@@ -1,0 +1,85 @@
+{% block content %}
+	<div class="row">
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.base ~ routes.dashboard.children.customers.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="bx bxs-group"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">Clients</h4>
+						<h4 class="text-bold mr-30">{{ customers }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.base ~ routes.dashboard.children.accounting.uri ~ routes.dashboard.children.accounting.sub_pages.invoices.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="bx bxs-file-pdf"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">Factures</h4>
+						<h4 class="text-bold mr-30">{{ invoices }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.base ~ routes.dashboard.children.accounting.uri ~ routes.dashboard.children.accounting.sub_pages.quotes.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="bx bxs-file-pdf"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">Devis</h4>
+						<h4 class="text-bold mr-30">{{ quotes }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.base ~ routes.dashboard.children.accounting.uri ~ routes.dashboard.children.accounting.sub_pages.deposits.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="bx bxs-file-pdf"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">Accomptes</h4>
+						<h4 class="text-bold mr-30">{{ deposits }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.base ~ routes.dashboard.children.companies.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="bx bxs-briefcase"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">Sociétés</h4>
+						<h4 class="text-bold mr-30">{{ companies }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+	</div>
+	<!-- End Row -->
+{% endblock %}

@@ -1,0 +1,59 @@
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.base ~ routes.dashboard.children.settings.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30" id="api">
+				<div class="title mb-30">
+					<h6>API</h6>
+				</div>
+				<form method="POST" id="regenerate-api-key-form">
+					<div class="row">
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label for="api_token">Clé d'API Admin</label>
+								<div class="input-group">
+									<input disabled class="form-control" type="password" name="api_token" placeholder="Clé d'API Admin" value="{{ params.settings.admin_api_token }}"/>
+									<button class="btn primary-btn btn-hover d-flex justify-content-center align-items-center switch-input-password-text">
+										<i class='bx bx-show'></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<button type="submit" class="main-btn primary-btn btn-hollow btn-hover w-100">
+								Regénérer
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end card -->
+			<div class="card-style settings-card-2 mb-30" id="recherche">
+				<div class="title mb-30">
+					<h6>Recherche</h6>
+				</div>
+				<div class="row">
+					<div class="col-12 w-100 d-flex flex-column justify-content-around">
+						<button class="main-btn primary-btn btn-hollow btn-hover mb-3" id="clear-search-objects">
+							Vider les index
+						</button>
+						<button class="main-btn primary-btn btn-hollow btn-hover mb-3" id="fill-search-objects">
+							Remplir les index
+						</button>
+						<button class="main-btn primary-btn btn-hollow btn-hover mb-3" id="re-index-search">
+							Ré-Indexer
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

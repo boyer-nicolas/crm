@@ -1,0 +1,157 @@
+version: "3.9"
+services:
+  node_builder:
+    image: node:16
+    restart: "no"
+    user: node
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: bash -c "yarn"
+
+  composer_builder:
+    image: registry.gitlab.com/niwee-productions/docker-images/php:${PHP_VERSION}
+    restart: "no"
+    environment:
+      - "USER_ID=${USER_ID}"
+    volumes:
+      - ./:/app
+    working_dir: /app
+    entrypoint: "composer install && composer dump-autoload"
+    command: ""
+    tty: true
+
+  app:
+    image: "registry.gitlab.com/niwee-productions/docker-images/php:${PHP_VERSION}"
+    restart: unless-stopped
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "php", "-v"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    environment:
+      - "USER_ID=${USER_ID}"
+    env_file:
+      - .env
+    volumes:
+      - "./:/var/www/html/app"
+      - "./:/var/opt/app"
+      - "./.git:/var/opt/app/.git"
+    working_dir: /var/www/html/app
+    tty: true
+
+  caddy:
+    image: "registry.gitlab.com/niwee-productions/docker-images/caddy:latest"
+    restart: unless-stopped
+    environment:
+      - "USER_ID=${USER_ID}"
+    healthcheck:
+      test: ["CMD", "caddy", "version"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    env_file:
+      - .env
+    depends_on:
+      app:
+        condition: service_healthy
+    links:
+      - "app"
+    volumes_from:
+      - "app"
+    volumes:
+      - "pma:/usr/share/webapps/phpmyadmin"
+      - ".serve/Caddyfile:/etc/caddy/Caddyfile"
+    ports:
+      - 80:80
+      - 443:443
+    tty: true
+
+  mariadb:
+    restart: unless-stopped
+    image: mariadb:latest
+    depends_on:
+      node_builder:
+        condition: "service_completed_successfully"
+      composer_builder:
+        condition: "service_completed_successfully"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innodb-file-per-table=1 --skip-innodb-read-only-compressed
+    expose:
+      - "3306:3306"
+    env_file:
+      - ".db.local.env"
+    volumes:
+      - "./sql:/docker-entrypoint-initdb.d"
+    tty: true
+
+  phpmyadmin:
+    restart: unless-stopped
+    image: "registry.gitlab.com/niwee-productions/docker-images/phpmyadmin:latest"
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    environment:
+      - "USER_ID=${USER_ID}"
+      - "GROUP_ID=${GROUP_ID}"
+    env_file:
+      - ".env"
+    links:
+      - mariadb
+    volumes:
+      - "pma:/usr/share/webapps/phpmyadmin"
+    tty: true
+
+  maildev:
+    image: djfarrelly/maildev
+    restart: unless-stopped
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    ports:
+      - "${MAILDEV_PORT}:80"
+
+  cron:
+    build: .serve/cron
+    restart: "unless-stopped"
+    environment:
+      - "USER_ID=${USER_ID}"
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    env_file:
+      - ".db.local.env"
+      - ".env"
+    volumes:
+      - "./sql:/sql"
+      - ".serve/cron/scripts:/usr/local/bin"
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  node:
+    image: node:16
+    restart: unless-stopped
+    links:
+      - "caddy"
+    tty: true
+    command: ["yarn", "dev"]
+    user: node
+    depends_on:
+      caddy:
+        condition: service_healthy
+    volumes:
+      - ./:/app
+    working_dir: /app
+    ports:
+      - "3000:3000"
+
+volumes:
+  app:
+  mariadb:
+  pma:

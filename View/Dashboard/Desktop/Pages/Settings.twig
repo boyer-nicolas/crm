@@ -1,0 +1,67 @@
+{% block content %}
+	<div class="row">
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.settings.uri ~ routes.dashboard.children.settings.sub_pages.general.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.settings.sub_pages.general.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.settings.sub_pages.general.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.settings.uri ~ routes.dashboard.children.settings.sub_pages.pdf.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.settings.sub_pages.pdf.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.settings.sub_pages.pdf.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.settings.uri ~ routes.dashboard.children.settings.sub_pages.advanced.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.settings.sub_pages.advanced.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.settings.sub_pages.advanced.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.settings.uri ~ routes.dashboard.children.settings.sub_pages.logs.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.settings.sub_pages.logs.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.settings.sub_pages.logs.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+	</div>
+	<!-- End Row -->
+{% endblock %}

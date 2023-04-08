@@ -1,0 +1,39 @@
+{
+  "name": "niwee/trident",
+  "autoload": {
+    "psr-4": {
+      "Niwee\\Trident\\Core\\": "Core/",
+      "Niwee\\Trident\\Controller\\": "Controller/",
+      "Niwee\\Trident\\Tests\\": "Tests/",
+      "Niwee\\Trident\\API\\": "API/"
+    }
+  },
+  "authors": [
+    {
+      "name": "NiWee Productions",
+      "email": "hello@niwee.fr"
+    }
+  ],
+  "require": {
+    "filp/whoops": "^2.14",
+    "bramus/router": "^1.6",
+    "twig/twig": "^3.3",
+    "algolia/algoliasearch-client-php": "^3.2",
+    "phpauth/phpauth": "dev-master",
+    "catfan/medoo": "^2.1",
+    "konekt/pdf-invoice": "^1.11",
+    "symfony/dotenv": "^5.4",
+    "symfony/yaml": "^5.4",
+    "ext-json": "*",
+    "phpmailer/phpmailer": "^6.6"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0"
+    }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "phpunit/phpunit": "^9.5"
+  }
+}

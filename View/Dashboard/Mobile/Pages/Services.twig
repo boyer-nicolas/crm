@@ -1,0 +1,82 @@
+{% extends 'layouts/dashboard.twig' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card-style mb-30">
+				<h6 class="mb-10">
+					{{ title }}
+				</h6>
+				<p class="text-sm mb-20">
+					Tous nos clients enregistrés.
+				</p>
+				<div class="table-wrapper table-responsive pt-20">
+					{% if services is iterable %}
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										<h6>
+											ID
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Nom
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Description
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Prix
+										</h6>
+									</th>
+								</tr>
+								<!-- end table row -->
+							</thead>
+							<tbody>
+								{% for service in services %}
+									<tr>
+										<td class="min-width">
+											<p>
+												{{ service.id }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{ service.name }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{ service.description }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{ service.price }}
+											</p>
+										</td>
+										{% include 'modules/tables/action.twig' %}
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					{% else %}
+						<p>
+							{{ services }}
+						</p>
+					{% endif %}
+					<!-- end table -->
+				</div>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+{% endblock %}

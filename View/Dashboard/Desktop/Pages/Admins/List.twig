@@ -1,0 +1,134 @@
+<div class="card-style mb-30">
+    <div class="d-flex justify-content-between">
+        <div>
+            <h6 class="mb-10">
+                Tous les admins enregistrés.
+            </h6>
+        </div>
+        <div>
+            <button id="add-admin-btn"
+                class="main-btn primary-btn btn-hover btn-md">
+                Ajouter un Admin
+            </button>
+        </div>
+    </div>
+    <div class="table-wrapper table-responsive pt-20">
+        {% if admins is iterable %}
+            <table class="table" id="admins-table">
+                <thead>
+                    <tr>
+                        <th>
+                            <h6>
+                                ID
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Nom
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Email
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Téléphone
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Société
+                            </h6>
+                        </th>
+                        <th>
+                            <h6>
+                                Action
+                            </h6>
+                        </th>
+                    </tr>
+                    <!-- end table row -->
+                </thead>
+                <tbody>
+                    {% for admin in admins %}
+                        <tr>
+                            <td class="min-width cursor-pointer">
+                                <div class="custom-control custom-checkbox cursor-pointer">
+                                    <input class="form-check-input custom-control-input"
+                                        type="checkbox"
+                                        name="multi-select-{{ admin.user_id }}"
+                                        value="{{ admin.user_id }}" />
+                                    <label class="form-check-label"
+                                        for="multi-select-{{ admin.user_id }}">
+                                        {{ admin.user_id }}
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="min-width">
+                                <div class="lead">
+                                    <div class="lead-image">
+                                        <img width="25"
+                                            height="25"
+                                            src="{{ admin.avatar }}"
+                                            alt="" />
+                                    </div>
+                                    <div class="lead-text">
+                                        <p>
+                                            {{ admin.first_name }}
+                                            {{ admin.last_name }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="min-width">
+                                <p>
+                                    <a title="Envoyer un mail à {{
+                                        admin.first_name
+                                        }} {{ admin.last_name }}"
+                                        href="mailto:{{ admin.email }}">
+                                        {{ admin.email }}
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="min-width">
+                                <p>
+                                    <a title="Téléphoner à {{
+                                        admin.first_name
+                                        }} {{ admin.last_name }}"
+                                        href="tel:{{ admin.phone }}}}">
+                                        {{ admin.phone }}
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="min-width">
+                                <p>
+                                    {{ admin.company }}
+                                </p>
+                            </td>
+                            {% include 'modules/tables/action.twig' with {
+                                id: admin.user_id
+                            } %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>
+                {{ admins }}
+            </p>
+        {% endif %}
+        <!-- end table -->
+    </div>
+    <div class="select-opts">
+        <div class="row d-flex justify-content-center bg-white py-3 position-fixed bottom-0">
+            <div class="col">
+                <button class="btn primary-btn btn-md mx-2"
+                    id="multiple-delete-users">
+                    Supprimer <span id="users-to-delete"></span> Admins
+                </button>
+            </div>
+        </div>
+    </div>
+    {% include 'modules/pagination.twig' %}
+</div>

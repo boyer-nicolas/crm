@@ -1,0 +1,174 @@
+<!-- ========== header start ========== -->
+<header class="header">
+	<div class="navigation desktop">
+		<div class="container-fluid header-nav">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-6">
+					<div class="header-left d-flex align-items-center">
+						<div class="header-search d-none d-md-flex">
+							<button id="search-btn" class="btn primary-btn btn-hover d-flex justify-content-center align-items-center">
+								<i class="bx bx-search pr-10"></i>
+								Rechercher
+								<span class="pl-10">
+									<span class="command-key shadow">
+										<svg width="15" height="15">
+											<path d="M4.505 4.496h2M5.505 5.496v5M8.216 4.496l.055 5.993M10 7.5c.333.333.5.667.5 1v2M12.326 4.5v5.996M8.384 4.496c1.674 0 2.116 0 2.116 1.5s-.442 1.5-2.116 1.5M3.205 9.303c-.09.448-.277 1.21-1.241 1.203C1 10.5.5 9.513.5 8V7c0-1.57.5-2.5 1.464-2.494.964.006 1.134.598 1.24 1.342M12.553 10.5h1.953" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="square"></path>
+										</svg>
+									</span>
+									<span class="command-key shadow">K</span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-7 col-6">
+					<div class="header-right">
+						<button id="darkmode-switch" class="{{ (session.theme == 'dark' ? 'active': '' )}}">
+							<svg id="graphic" viewbox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg">
+								<g id="sung">
+									<path id="sun" d="m99.722 66.146a33.576 33.576 0 0 1-33.576 33.576 33.576 33.576 0 0 1-33.576-33.576 33.576 33.576 0 0 1 33.576-33.576 33.576 33.576 0 0 1 33.576 33.576"/>
+									<g id="sunshine" transform="matrix(.92602 0 0 .92602 -10.774 -58.541)">
+										<path transform="matrix(0 .58145 -.59067 0 145.26 159.26)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(-.41115 .41115 -.41766 -.41766 109.64 196.03)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(-.58145 0 0 -.59067 58.451 196.84)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(-.41115 -.41115 .41766 -.41766 21.685 161.22)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(0 -.58145 .59067 0 20.875 110.03)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(.41115 -.41115 .41766 .41766 56.495 73.269)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(.58145 0 0 .59067 107.68 72.459)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+										<path transform="matrix(.41115 .41115 -.41766 .41766 144.45 108.08)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+									</g>
+								</g>
+								<path id="croissant" d="m55.461 34.281a33.587 33.587 0 0 0-22.874 31.832 33.587 33.587 0 0 0 33.587 33.587 33.587 33.587 0 0 0 30.441-19.395 31.187 31.187 0 0 1-17.268 5.2174 31.187 31.187 0 0 1-31.187-31.187 31.187 31.187 0 0 1 7.3022-20.053z"/>
+							</svg>
+
+						</button>
+						<!-- email start -->
+						<div class="notification-box ml-15 d-none d-md-flex">
+							<button class="dropdown-toggle" type="button" id="notification" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bx bxs-envelope"></i>
+								<span>6</span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification">
+								<li>
+									<a href="#0">
+										<div class="content">
+											<h6>
+												Laura Bloyet
+												<span class="text-regular">
+													Au sujet des maintenances ...
+												</span>
+											</h6>
+											<p>
+												J'aimerais avoir un rendez-vous pour le ...
+											</p>
+											<span>Il y a 6min</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#0">
+										<div class="content">
+											<h6>
+												Marie Sordet
+												<span class="text-regular">
+													Page d'attente du site inter ...
+												</span>
+											</h6>
+											<p>
+												J'aurais aimé mettre à jour la photo de ...
+											</p>
+											<span>Il y a 20min</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- email end -->
+						<!-- notification start -->
+						<div class="notification-box ml-15 d-none d-md-flex">
+							<button class="dropdown-toggle" type="button" id="notification" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bx bxs-bell"></i>
+								<span>2</span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification">
+								<li>
+									<a href="#0">
+										<div class="image">
+											<img src="/public/images/lead/lead-6.png" alt=""/>
+										</div>
+										<div class="content">
+											<h6>
+												John Doe
+												<span class="text-regular">
+													comment on a product.
+												</span>
+											</h6>
+											<p>
+												Lorem ipsum dolor sit amet, consect etur adipiscing elit
+																																																																																																																																																												                        Vivamus tortor.
+											</p>
+											<span>10 mins ago</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#0">
+										<div class="image">
+											<img src="/public/images/lead/lead-1.png" alt=""/>
+										</div>
+										<div class="content">
+											<h6>
+												Jonathon
+												<span class="text-regular">
+													like on a product.
+												</span>
+											</h6>
+											<p>
+												Lorem ipsum dolor sit amet, consect etur adipiscing elit
+																																																																																																																																																												                        Vivamus tortor.
+											</p>
+											<span>10 mins ago</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- notification end -->
+						<!-- profile start -->
+						<div class="profile-box ml-15">
+							<button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+								<div class="profile-info">
+									<div class="info">
+										<h6>
+											<span class="not-bold">{{ good_day_message }}</span>,
+											{{ session.first_name }}</h6>
+										<div class="image">
+											<img src="{{ session.avatar }}" alt=""/>
+										</div>
+									</div>
+								</div>
+								<i class="lni lni-chevron-down"></i>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+								<li>
+									<a href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri }}">
+										<i class="lni lni-user"></i>
+										Mon Profil
+									</a>
+								</li>
+								<li>
+									<a href="deconnexion" id="logout-btn">
+										<i class="lni lni-exit"></i>
+										Déconnexion
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- profile end -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	<!-- ========== header end ========== -->

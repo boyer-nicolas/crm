@@ -1,0 +1,56 @@
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.base ~ routes.dashboard.children.settings.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Général</h6>
+				</div>
+				<form action="#">
+					<div class="row">
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label for="api_token">Clé d'API Admin</label>
+								<div class="input-group">
+									<input disabled class="form-control" type="password" name="api_token" placeholder="Clé d'API Admin" value="{{ params.settings.admin_api_token }}"/>
+									<button class="btn primary-btn btn-hover d-flex justify-content-center align-items-center switch-input-password-text">
+										<i class='bx bx-show'></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="select-style-1">
+								<label>Société par défaut des PDF</label>
+								<div class="select-position">
+									<select class="light-bg">
+										<option value="{{ params.linked_company.id }}">{{ params.linked_company.name }}
+										</option>
+										{% if params.companies_available is iterable %}
+											{% for company in params.companies_available %}
+												<option value="{{ company.id }}">{{ company.name }}</option>
+											{% endfor %}
+										{% endif %}
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mb-3">
+							<button class="main-btn primary-btn btn-hollow btn-hover w-100">
+								Mettre à Jour
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

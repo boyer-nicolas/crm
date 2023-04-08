@@ -1,0 +1,23 @@
+{% block content %}
+	<div class="row">
+		{% for subscription_type in routes.dashboard.children.subscriptions.sub_pages %}
+
+			<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+				<a href="{{ routes.dashboard.base }}{{ routes.dashboard.children.subscriptions.uri }}{{ subscription_type.uri }}" class="icon-card mb-20" title="{{ subscription_type.title }}">
+					<div class="icon">
+						<i class="{{ subscription_type.icon }}"></i>
+					</div>
+					<div class="content w-100">
+						<div class="d-flex w-100 justify-content-between">
+							<h6 class="flex-grow-1">{{ subscription_type.title }}</h4>
+							<h4 class="text-bold mr-30">{{ invoices }}</h4>
+							<i class='bx bxs-chevrons-right mr-30'></i>
+						</div>
+					</div>
+				</a>
+				<!-- End Icon Cart -->
+			</div>
+		{% endfor %}
+	</div>
+	<!-- End Row -->
+{% endblock %}

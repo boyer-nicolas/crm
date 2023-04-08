@@ -1,0 +1,7 @@
+name: "Trident byNiWee"
+url: "trident.localhost"
+debug: true
+env: development
+https: true
+access_log: "logs/access.log"
+error_log: "logs/error.log"

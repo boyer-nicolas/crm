@@ -1,0 +1,52 @@
+{% block content %}
+	<div class="row">
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.children.profile.uri ~ routes.dashboard.children.profile.sub_pages.general.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.profile.sub_pages.general.icon }}"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">{{ routes.dashboard.children.profile.sub_pages.general.title }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.children.profile.uri ~ routes.dashboard.children.profile.sub_pages.security.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.profile.sub_pages.security.icon }}"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">{{ routes.dashboard.children.profile.sub_pages.security.title }}</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link navigation-card">
+			<a href="{{ routes.dashboard.children.profile.uri ~ routes.dashboard.children.profile.sub_pages.advanced.uri }}" class="icon-card mb-20">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.profile.sub_pages.advanced.icon }}"></i>
+				</div>
+				<div class="content w-100">
+					<div class="d-flex w-100 justify-content-between">
+						<h6 class="flex-grow-1">
+							{{ routes.dashboard.children.profile.sub_pages.advanced.title }}
+						</h4>
+						<i class='bx bxs-chevrons-right mr-30'></i>
+					</div>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+	</div>
+	<!-- End Row -->
+{% endblock %}

@@ -1,0 +1,25 @@
+$red-control  : rgb(219, 2, 2);
+$green-control: #019409;
+
+.pristine-error {
+  color     : $red-control;
+  font-size : 13px;
+  text-align: left;
+  list-style: none;
+}
+
+.has-danger input {
+  border-color: $red-control !important;
+
+  &:focus {
+    border-color: $red-control !important;
+  }
+}
+
+.has-success input {
+  border-color: $green-control !important;
+
+  &:focus {
+    border-color: $green-control !important;
+  }
+}

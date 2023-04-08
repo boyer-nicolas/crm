@@ -1,0 +1,54 @@
+name: Trident Prod
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: "Build Javascript and SCSS"
+    if: contains(github.event.head_commit.message, '[push_prod]')
+    runs-on: trident
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn
+      - run: yarn build
+
+  deploy:
+    name: "Deploy to production"
+    if: contains(github.event.head_commit.message, '[push_prod]')
+    needs: [build]
+    runs-on: trident
+    steps:
+      - name: Update, build and deploy
+        uses: fifsky/ssh-action@v0.0.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          pass: ${{ secrets.SSH_PASS }}
+          args: "-tt -vvv"
+          command: |
+            cd /home/niwee/public_html/prods/crm/app
+            git fetch --all
+            git reset --hard
+            git clean -df
+            git pull || true
+            ./update.sh
+            yarn clean
+            yarn install
+            yarn build
+            cd ..
+            docker-compose down -v
+            docker-compose up -d

@@ -1,0 +1,84 @@
+{% block content %}
+
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Mes Informations</h6>
+				</div>
+				<form action="#">
+					<div class="row">
+						<div class="col-xxl-6">
+							<div class="input-style-1 form-group">
+								<label>Prénom</label>
+								<input type="text" placeholder="Prénom" value="{{ user.first_name }}"/>
+							</div>
+						</div>
+						<div class="col-xxl-6">
+							<div class="input-style-1 form-group">
+								<label>Nom</label>
+								<input type="text" placeholder="Nom" value="{{ user.last_name }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Email</label>
+								<input type="email" placeholder="Email" value="{{ user.email }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Société</label>
+								<input type="text" placeholder="Société" value="{{ user.linked_company.name }}"/>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Téléphone</label>
+								<input type="number" placeholder="Téléphone" value="{{ user.phone }}"/>
+							</div>
+						</div>
+						<div class="col-12 mb-4">
+							<div>
+								<label for="formFile" class="form-label">Avatar</label>
+								<input class="form-control" type="file" id="formFile" value="{{ user.avatar }}"/>
+							</div>
+							<img width="50" height="50" src="{{ user.avatar }}" alt="Avatar">
+						</div>
+					</div>
+					<button class="main-btn primary-btn btn-hollow btn-hover mb-3 w-100" id="re-index-search">
+						Mettre à Jour
+					</button>
+				</form>
+			</div>
+			<!-- end card -->
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Interface</h6>
+				</div>
+
+				<button id="darkmode-switch" class="mx-auto {{ (session.theme == 'dark' ? 'active': '' ) }}">
+					<svg id="graphic" viewbox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg">
+						<g id="sung">
+							<path id="sun" d="m99.722 66.146a33.576 33.576 0 0 1-33.576 33.576 33.576 33.576 0 0 1-33.576-33.576 33.576 33.576 0 0 1 33.576-33.576 33.576 33.576 0 0 1 33.576 33.576"/>
+							<g id="sunshine" transform="matrix(.92602 0 0 .92602 -10.774 -58.541)">
+								<path transform="matrix(0 .58145 -.59067 0 145.26 159.26)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(-.41115 .41115 -.41766 -.41766 109.64 196.03)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(-.58145 0 0 -.59067 58.451 196.84)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(-.41115 -.41115 .41766 -.41766 21.685 161.22)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(0 -.58145 .59067 0 20.875 110.03)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(.41115 -.41115 .41766 .41766 56.495 73.269)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(.58145 0 0 .59067 107.68 72.459)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+								<path transform="matrix(.41115 .41115 -.41766 .41766 144.45 108.08)" d="m-19.4 32.282h-45.867l22.934-39.722z"/>
+							</g>
+						</g>
+						<path id="croissant" d="m55.461 34.281a33.587 33.587 0 0 0-22.874 31.832 33.587 33.587 0 0 0 33.587 33.587 33.587 33.587 0 0 0 30.441-19.395 31.187 31.187 0 0 1-17.268 5.2174 31.187 31.187 0 0 1-31.187-31.187 31.187 31.187 0 0 1 7.3022-20.053z"/>
+					</svg>
+				</button>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

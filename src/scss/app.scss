@@ -1,0 +1,52 @@
+@import "variables";
+
+@import "~/node_modules/bootstrap/scss/bootstrap";
+@import "~/node_modules/boxicons/css/boxicons.min.css";
+@import "~/node_modules/animate.css/animate.min.css";
+
+@import "mixin";
+@import "common";
+
+@import "./typography";
+
+@import "./buttons";
+
+@import "./alerts";
+
+@import "./cards";
+
+@import "./tables";
+
+@import "./form-elements";
+
+@import "./notification";
+
+@import "./dashboards";
+
+@import "./header";
+
+@import "./footer";
+
+@import "./signin";
+
+@import "./settings";
+
+@import "./invoice";
+
+@import "./icons";
+
+@import "./calendar";
+
+@import "sidebar";
+
+@import "formvalidation";
+
+@import "tablesettings";
+
+@import "modal";
+
+@import "search";
+
+@import "clients";
+
+@import "default";

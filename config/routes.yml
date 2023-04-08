@@ -1,0 +1,309 @@
+home:
+  uri: "/"
+  controller: "Landing\\HomeController"
+  title: "Accueil"
+  icon: "bx bxs-user"
+  template: "Pages/Home"
+  public: true
+
+login:
+  uri: "/connexion"
+  controller: "Landing\\LoginController"
+  title: "Connexion"
+  icon: "bx bxs-user"
+  template: "Pages/Login"
+  public: true
+  sidebar: false
+
+dashboard:
+  base: "/admin"
+  has_access:
+    - "admin"
+  children:
+    home:
+      uri: "/"
+      controller: "Dashboard\\DashboardController"
+      title: "General"
+      icon: "bx bx-tachometer"
+      mobile: false
+      sidebar: true
+      template: "Pages/General"
+      has_access:
+        - "admin"
+        - "customer"
+
+    customers:
+      uri: "/clients"
+      controller: "Dashboard\\CustomersController"
+      title: "Clients"
+      mobile: true
+      icon: "bx bxs-group"
+      sidebar: true
+      template: "Pages/Customers"
+      has_access:
+        - "admin"
+        - "customer"
+
+    mail:
+      uri: "/mail"
+      controller: "Dashboard\\MailController"
+      title: "Emails"
+      icon: "bx bxs-envelope"
+      sidebar: false
+      mobile: true
+      template: "Pages/Mail"
+      has_access:
+        - "admin"
+        - "customer"
+
+    notifications:
+      uri: "/notifications"
+      controller: "Dashboard\\NotificationsController"
+      title: "Notifications"
+      icon: "bx bx-bell"
+      sidebar: false
+      mobile: true
+      template: "Pages/Notifications"
+      has_access:
+        - "admin"
+        - "customer"
+
+    prospects:
+      uri: "/prospects"
+      controller: "Dashboard\\ProspectsListController"
+      title: "Prospects"
+      icon: "bx bxs-group"
+      sidebar: true
+      mobile: true
+      template: "Pages/Prospects"
+      has_access:
+        - "admin"
+        - "customer"
+
+    projects:
+      uri: "/projets"
+      controller: "Dashboard\\ProjectsListController"
+      title: "Projets"
+      icon: "bx bx-list-ul"
+      sidebar: true
+      mobile: true
+      template: "Pages/Projects"
+      has_access:
+        - "admin"
+
+    companies:
+      uri: "/societes"
+      controller: "Dashboard\\CompaniesController"
+      title: "Sociétés"
+      icon: "bx bxs-briefcase"
+      sidebar: true
+      mobile: true
+      template: "Pages/Companies"
+      has_access:
+        - "admin"
+
+    admins:
+      uri: "/admins"
+      controller: "Dashboard\\AdminsListController"
+      title: "Admins"
+      icon: "bx bxs-group"
+      sidebar: true
+      mobile: true
+      template: "Pages/Admins"
+      has_access:
+        - "admin"
+
+    offers:
+      uri: "/services"
+      controller: "Dashboard\\ServicesListController"
+      title: "Services"
+      icon: "bx bxs-offer"
+      sidebar: true
+      mobile: true
+      template: "Pages/Services"
+      has_access:
+        - "admin"
+
+    subscriptions:
+      uri: "/abonnements"
+      controller: "Dashboard\\SubscriptionsListController"
+      title: "Abonnements"
+      icon: "bx bxs-shopping-bags"
+      sidebar: true
+      mobile: true
+      template: "Pages/Subscriptions"
+      has_access:
+        - "admin"
+      sub_pages:
+        maintenances:
+          uri: "/maintenances"
+          title: "Maintenances"
+          icon: "bx bxs-server"
+          template: "Pages/Subscriptions/Maintenances"
+          controller: "Dashboard\\SubscriptionsMaintenancesListController"
+
+    accounting:
+      uri: "/comptabilite"
+      controller: "Dashboard\\AccountingController"
+      title: "Comptabilité"
+      icon: "bx bxs-bank"
+      sidebar: true
+      mobile: true
+      template: "Pages/Accounting"
+      has_access:
+        - "admin"
+        - "customer"
+      sub_pages:
+        quotes:
+          uri: "/devis"
+          controller: "Dashboard\\Accounting\\QuotesListController"
+          title: "Devis"
+          icon: "bx bxs-file-pdf"
+          sidebar: true
+          mobile: true
+          template: "Pages/Accounting/Quotes"
+          has_access:
+            - "admin"
+            - "customer"
+
+        deposits:
+          uri: "/accomptes"
+          controller: "Dashboard\\Accounting\\DepositsListController"
+          title: "Accomptes"
+          icon: "bx bxs-file-pdf"
+          sidebar: true
+          mobile: true
+          template: "Pages/Accounting/Deposits"
+          has_access:
+            - "admin"
+            - "customer"
+
+        invoices:
+          uri: "/factures"
+          controller: "Dashboard\\Accounting\\InvoicesListController"
+          title: "Factures"
+          icon: "bx bxs-file-pdf"
+          sidebar: true
+          mobile: true
+          template: "Pages/Accounting/Invoices"
+          has_access:
+            - "admin"
+            - "customer"
+
+    support:
+      uri: "/support"
+      controller: "Dashboard\\SupportController"
+      title: "Support"
+      icon: "bx bx-support"
+      sidebar: true
+      mobile: true
+      template: "Pages/Support"
+      has_access:
+        - "admin"
+      sub_pages:
+        tickets:
+          uri: "/tickets"
+          controller: "Dashboard\\Support\\TicketsListController"
+          title: "Tickets"
+          icon: "bx bxs-file-pdf"
+          sidebar: true
+          mobile: true
+          template: "Pages/Support/Tickets"
+          has_access:
+            - "admin"
+            - "customer"
+
+    settings:
+      uri: "/parametres"
+      controller: "Dashboard\\SettingsController"
+      mobile: false
+      title: "Paramètres"
+      icon: "bx bx-cog"
+      template: "Pages/Settings"
+      sidebar: true
+      bottom: true
+      has_access:
+        - "admin"
+      sub_pages:
+        general:
+          uri: "/general"
+          controller: "Dashboard\\Settings\\GeneralController"
+          title: "General"
+          icon: "bx bx-cog"
+          template: "Pages/Settings/General"
+          sidebar: false
+          has_access:
+            - "admin"
+            - "customer"
+        pdf:
+          uri: "/pdf"
+          controller: "Dashboard\\Settings\\PDFController"
+          title: "PDFs"
+          icon: "bx bxs-file-pdf"
+          template: "Pages/Settings/PDFs"
+          sidebar: false
+          has_access:
+            - "admin"
+            - "customer"
+        advanced:
+          uri: "/avance"
+          controller: "Dashboard\\Settings\\AdvancedController"
+          title: "Avancé"
+          icon: "bx bx-slider-alt"
+          template: "Pages/Settings/Advanced"
+          sidebar: false
+          has_access:
+            - "admin"
+            - "customer"
+        logs:
+          uri: "/logs"
+          controller: "Dashboard\\Settings\\LogsController"
+          title: "Logs"
+          icon: "bx bx-clipboard"
+          template: "Pages/Settings/Logs"
+          sidebar: true
+          bottom: true
+          has_access:
+            - "admin"
+
+    profile:
+      uri: "/profil"
+      controller: "Dashboard\\ProfileController"
+      title: "Mon Profil"
+      icon: "bx bxs-user"
+      template: "Pages/Profile"
+      sidebar: false
+      has_access:
+        - "admin"
+        - "customer"
+      sub_pages:
+        general:
+          uri: "/general"
+          controller: "Dashboard\\Profile\\GeneralController"
+          title: "General"
+          icon: "bx bx-cog"
+          template: "Pages/Profile/General"
+          sidebar: false
+          has_access:
+            - "admin"
+            - "customer"
+        security:
+          uri: "/securite"
+          controller: "Dashboard\\Profile\\SecurityController"
+          title: "Securité"
+          icon: "bx bx-lock-alt"
+          template: "Pages/Profile/Security"
+          sidebar: false
+          has_access:
+            - "admin"
+            - "customer"
+        advanced:
+          uri: "/avance"
+          controller: "Dashboard\\Profile\\AdvancedController"
+          title: "Avancé"
+          icon: "bx bx-slider-alt"
+          template: "Pages/Profile/Advanced"
+          sidebar: false
+          has_access:
+            - "admin"
+            - "customer"

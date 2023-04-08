@@ -1,0 +1,170 @@
+<div class="row mb-3">
+	<div class="col">
+		<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ current_page }}">
+			<i class='bx bx-left-arrow-alt'></i>
+			Retour</a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xxl-9 col-lg-8">
+		<div class="client-profile-wrapper mb-30">
+			<div class="client-cover">
+				<img height="200" src="/public/images/clients/client-banner.jpg" alt="cover-image">
+			</div>
+			<div class="client-profile-photo">
+				<div class="image">
+					<img width="100" src="{{ customers.avatar }}" alt="profile">
+				</div>
+				<div class="profile-meta text-start py-3 px-5">
+					<h3 class="text-bold mb-10">{{ customers.first_name }}
+						{{ customers.last_name }}</h3>
+					<p class="text-sm">{{ customers.company }}</p>
+				</div>
+			</div>
+			<div class="client-info px-5">
+				{% if customers.bio %}
+					{% if customers.bio is not empty %}
+						<h5 class="text-bold mt-15">Bio</h5>
+						<p class="text-sm mb-20">
+							{{ customers.bio }}
+						</p>
+					{% endif %}
+				{% endif %}
+				<h5 class="text-bold mt-15">Créé le</h5>
+				<p>{{ customer.created_at|date("\\L\\e d/m/Y \\à H\\Hi", "Europe/Paris") }}</p>
+				<h5 class="text-bold mt-15">Mis à jour le</h5>
+				<p>{{ customer.updated_at|date("\\L\\e d/m/Y \\à H\\Hi", "Europe/Paris") }}</p>
+
+
+				<ul class="socials d-flex justify-content-between py-5">
+					{% if customers.facebook %}
+						{% if customers.facebook is not empty %}
+							<li>
+								<a href="{{ customers.facebook }}" target="_blank" class="profile-social-icon">
+									<i class='bx bxl-facebook'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if customers.twitter %}
+						{% if customers.twitter is not empty %}
+							<li>
+								<a href="{{ customers.twitter }}" target="_blank" class="profile-social-icon">
+									<i class='bx bxl-twitter'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if customers.instagram %}
+						{% if customers.instagram is not empty %}
+							<li>
+								<a href="{{ customers.instagram }}" target="_blank" class="profile-social-icon">
+									<i class='bx bxl-instagram'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if customers.linkedin %}
+						{% if customers.linkedin is not empty %}
+							<li>
+								<a href="{{ customers.linkedin }}" target="_blank" class="profile-social-icon">
+									<i class='bx bxl-linkedin'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if customers.email %}
+						{% if customers.email is not empty %}
+							<li>
+								<a href="mailto:{{ customers.email }}" class="profile-social-icon">
+									<i class='bx bx-envelope'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if customers.phone %}
+						{% if customers.phone is not empty %}
+							<li>
+								<a href="tel:{{ customers.phone }}" class="profile-social-icon">
+									<i class='bx bx-phone'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end col -->
+	<div class="col-xxl-3 col-lg-4">
+		<div class="row">
+			<a href="{{ routes.dashboard.children.offers.uri }}" class="col-sm-6 col-lg-12">
+				<div class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ routes.dashboard.children.offers.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">Services achetés</h6>
+						<h3 class="text-bold">1</h3>
+					</div>
+				</div>
+			</a>
+			<a href="{{ routes.dashboard.children.subscriptions.uri }}" class="col-sm-6 col-lg-12">
+				<div class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ routes.dashboard.children.subscriptions.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">Abonnements</h6>
+						<h3 class="text-bold">1</h3>
+					</div>
+				</div>
+			</a>
+			<a href="{{ routes.dashboard.children.support.sub_pages.tickets.uri }}" class="col-sm-6 col-lg-12">
+				<div class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ routes.dashboard.children.support.sub_pages.tickets.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">Tickets</h6>
+						<h3 class="text-bold">2</h3>
+					</div>
+				</div>
+			</a>
+			<a href="{{ routes.dashboard.children.accounting.sub_pages.invoices.uri }}" class="col-sm-6 col-lg-12">
+				<div class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ routes.dashboard.children.accounting.sub_pages.invoices.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">Factures</h6>
+						<h3 class="text-bold">3</h3>
+					</div>
+				</div>
+			</a>
+			<a href="{{ routes.dashboard.children.accounting.sub_pages.quotes.uri }}" class="col-sm-6 col-lg-12">
+				<div class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ routes.dashboard.children.accounting.sub_pages.quotes.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">Devis</h6>
+						<h3 class="text-bold">3</h3>
+					</div>
+				</div>
+			</a>
+			<a href="{{ routes.dashboard.children.accounting.sub_pages.deposits.uri }}" class="col-sm-6 col-lg-12">
+				<div class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ routes.dashboard.children.accounting.sub_pages.deposits.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">Accomptes</h6>
+						<h3 class="text-bold">3</h3>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- end col -->
+</div></div>

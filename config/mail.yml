@@ -1,0 +1,11 @@
+host: "mail.byniwee.io"
+port: 465
+auth: false
+username: "no-reply@byniwee.io"
+password: "fFYnX7GgGY5j2SJqqd3rQizo"
+secure: "ssl"
+from: "CRM byNiWee"
+from_email: "no-reply@byniwee.io"
+reply_to: "support@byniwee.io"
+reply_to_email: "support@byniwee.io"
+reply_to_name: "CRM byNiWee"

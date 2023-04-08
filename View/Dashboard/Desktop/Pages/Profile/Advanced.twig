@@ -1,0 +1,34 @@
+{% block content %}
+	<div class="row mb-3">
+		<div class="col">
+			<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri }}">
+				<i class='bx bx-left-arrow-alt'></i>
+				Retour</a>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-6">
+			<div class="card-style settings-card-2 mb-30">
+				<div class="title mb-30">
+					<h6>Avancé</h6>
+				</div>
+				<form action="#">
+					<div class="row">
+						<div class="col-12">
+							<div class="input-style-1 form-group">
+								<label>Token d'API</label>
+								<ul class="buttons-group">
+									<a href="#0" class="main-btn primary-btn btn-hover mx-2">Voir</a>
+									<a href="#0" class="main-btn primary-btn btn-hover mx-2">Générer</a>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+</div>{% endblock %}

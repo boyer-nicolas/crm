@@ -1,0 +1,21 @@
+{% block content %}
+	<div class="row">
+		{% for accounting_feature in routes.dashboard.children.accounting.sub_pages %}
+			<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+				<a href="{{ routes.dashboard.base }}{{ routes.dashboard.children.accounting.uri }}{{ accounting_feature.uri }}" title="{{ accounting_feature.title }}" class="icon-card mb-30">
+					<div class="icon">
+						<i class="{{ accounting_feature.icon }}"></i>
+					</div>
+					<div class="content">
+						<h6 class="mb-10">
+							{{ accounting_feature.title }}
+						</h6>
+					</div>
+				</a>
+				<!-- End Icon Cart -->
+			</div>
+			<!-- End Col -->
+		{% endfor %}
+	</div>
+	<!-- End Row -->
+{% endblock %}

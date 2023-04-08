@@ -1,0 +1,90 @@
+.search-popup {
+  visibility: hidden;
+  opacity   : 0;
+  @include transition(0.3s);
+  position     : fixed;
+  background   : var(--body-bg);
+  width        : 800px;
+  margin-left  : 100px;
+  left         : 50%;
+  top          : 50%;
+  transform    : translate(-50%, -50%);
+  padding      : 24px;
+  border-radius: 12px;
+  box-shadow   : rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  max-height   : 85%;
+  z-index      : 100;
+  overflow     : hidden;
+
+  @media #{$mobile} {
+    width      : 90%;
+    margin-left: 0;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity   : 1;
+  }
+
+  .search-result {
+    background: var(--body-bg-accent);
+    color     : var(--body-color);
+
+    p {
+      color: var(--body-color);
+    }
+
+    &:hover,
+    &.selected {
+      background-color: $primary !important;
+      color           : white;
+
+      p {
+        color: whitesmoke !important;
+      }
+    }
+  }
+
+  .results-count {
+    font-size  : 15px;
+    font-weight: 500;
+  }
+
+  #search-results {
+    overflow-y      : scroll;
+    max-height      : 520px;
+    background-color: var(--body-bg);
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: var(--body-bg);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background   : $primary;
+      border-radius: 6px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+
+  .foot {
+    padding-top: 1rem;
+
+    .command-key {
+      background: white;
+
+      &.shadow {
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 17%) !important;
+      }
+    }
+  }
+}

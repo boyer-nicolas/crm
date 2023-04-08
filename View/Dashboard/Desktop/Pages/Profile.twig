@@ -1,0 +1,52 @@
+{% block content %}
+	<div class="row">
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri ~ routes.dashboard.children.profile.sub_pages.general.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.profile.sub_pages.general.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.profile.sub_pages.general.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri ~ routes.dashboard.children.profile.sub_pages.security.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.profile.sub_pages.security.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.profile.sub_pages.security.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+		<!-- End Col -->
+		<div class="col-xl-3 col-lg-4 col-sm-6 card-nav-link">
+			<a href="{{ routes.dashboard.base ~ routes.dashboard.children.profile.uri ~ routes.dashboard.children.profile.sub_pages.advanced.uri }}" class="icon-card mb-30">
+				<div class="icon">
+					<i class="{{ routes.dashboard.children.profile.sub_pages.advanced.icon }}"></i>
+				</div>
+				<div class="content">
+					<h6 class="mb-10">
+						{{
+                            routes.dashboard.children.profile.sub_pages.advanced.title
+                        }}
+					</h6>
+				</div>
+			</a>
+			<!-- End Icon Cart -->
+		</div>
+	</div>
+	<!-- End Row -->
+{% endblock %}

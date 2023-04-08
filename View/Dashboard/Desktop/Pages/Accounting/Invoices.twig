@@ -1,0 +1,70 @@
+{% block content %}
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card-style mb-30">
+				<h6 class="mb-10">
+					{{ title }}
+				</h6>
+				<p class="text-sm mb-20">
+					Toutes les factures générées .
+				</p>
+				<div class="table-wrapper table-responsive pt-20">
+					{% if invoices is iterable %}
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										<h6>
+											ID
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Chemin
+										</h6>
+									</th>
+									<th>
+										<h6>
+											Société
+										</h6>
+									</th>
+								</tr>
+								<!-- end table row -->
+							</thead>
+							<tbody>
+								{% for invoice in invoices %}
+									<tr>
+										<td class="min-width">
+											<p>
+												{{ invoice.id }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{ invoice.path }}
+											</p>
+										</td>
+										<td class="min-width">
+											<p>
+												{{ invoice.company }}
+											</p>
+										</td>
+										{% include 'modules/tables/action.twig' %}
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					{% else %}
+						<p>
+							{{ invoices }}
+						</p>
+					{% endif %}
+					<!-- end table -->
+				</div>
+			</div>
+			<!-- end card -->
+		</div>
+		<!-- end col -->
+	</div>
+	<!-- end row -->
+{% endblock %}

@@ -1,0 +1,13 @@
+static/build
+static/public
+node_modules
+vendor
+Core
+Controller
+cache
+data
+logs
+sql
+dist
+tests
+template

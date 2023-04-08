@@ -1,0 +1,98 @@
+<div class="row mb-3">
+	<div class="col">
+		<a class="btn main-btn primary-btn btn-hover btn-md" title="Revenir à la liste" href="{{ current_page }}">
+			<i class='bx bx-left-arrow-alt'></i>
+			Retour</a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xxl-9 col-lg-8">
+		<div class="client-profile-wrapper mb-30">
+			<div class="client-cover">
+				<img height="200" src="/public/images/clients/client-banner.jpg" alt="cover-image">
+			</div>
+			<div class="client-profile-photo">
+				<div class="image">
+					<img width="100" src="{{ admins.avatar }}" alt="profile">
+				</div>
+				<div class="profile-meta text-start py-3 px-5">
+					<h3 class="text-bold mb-10">{{ admins.first_name }}
+						{{ admins.last_name }}</h3>
+					<p class="text-sm">{{ admins.company }}</p>
+				</div>
+			</div>
+			<div class="client-info px-5">
+				{% if admins.bio %}
+					{% if admins.bio is not empty %}
+						<h5 class="text-bold mt-15">Bio</h5>
+						<p class="text-sm mb-20">
+							{{ admins.bio }}
+						</p>
+					{% endif %}
+				{% endif %}
+				<h5 class="text-bold mt-15">Créé le</h5>
+				<p>{{ customer.created_at|date("\\L\\e d/m/Y \\à H\\Hi", "Europe/Paris") }}</p>
+				<h5 class="text-bold mt-15">Mis à jour le</h5>
+				<p>{{ customer.updated_at|date("\\L\\e d/m/Y \\à H\\Hi", "Europe/Paris") }}</p>
+
+
+				<ul class="socials d-flex justify-content-between py-5">
+					{% if admins.facebook %}
+						{% if admins.facebook is not empty %}
+							<li>
+								<a href="{{ admins.facebook }}" target="_blank" class="bg-white profile-social-icon">
+									<i class='bx bxl-facebook'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if admins.twitter %}
+						{% if admins.twitter is not empty %}
+							<li>
+								<a href="{{ admins.twitter }}" target="_blank" class="bg-white profile-social-icon">
+									<i class='bx bxl-twitter'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if admins.instagram %}
+						{% if admins.instagram is not empty %}
+							<li>
+								<a href="{{ admins.instagram }}" target="_blank" class="bg-white profile-social-icon">
+									<i class='bx bxl-instagram'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if admins.linkedin %}
+						{% if admins.linkedin is not empty %}
+							<li>
+								<a href="{{ admins.linkedin }}" target="_blank" class="bg-white profile-social-icon">
+									<i class='bx bxl-linkedin'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if admins.email %}
+						{% if admins.email is not empty %}
+							<li>
+								<a href="mailto:{{ admins.email }}" class="bg-white profile-social-icon">
+									<i class='bx bx-envelope'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if admins.phone %}
+						{% if admins.phone is not empty %}
+							<li>
+								<a href="tel:{{ admins.phone }}" class="bg-white profile-social-icon">
+									<i class='bx bx-phone'></i>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

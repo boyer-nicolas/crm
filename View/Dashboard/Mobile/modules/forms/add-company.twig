@@ -1,0 +1,42 @@
+<form action="/api/add-customer" id="add-customer-form" method="POST">
+	<div class="text-start overflow-hidden">
+		<div class="input-group mb-3">
+			<div class="mx-1">
+				<div class="input-style-1 form-group">
+					<label>Prénom</label>
+					<input type="text" name="first_name" placeholder="Le Prénom du Client" required=""/>
+				</div>
+			</div>
+			<div class="mx-1">
+				<div class="input-style-1 form-group">
+					<label>Nom</label>
+					<input type="text" name="last_name" placeholder="Le Nom du Client" required=""/>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="input-style-1 form-group">
+				<label>Email</label>
+				<input type="email" name="email" placeholder="Email du Client" required=""/>
+			</div>
+		</div>
+		<div>
+			<div class="input-style-1 form-group">
+				<label>Mot de Passe</label>
+				<input type="password" name="password" placeholder="Mot de passe du Client" required=""/>
+			</div>
+		</div>
+		<div>
+			<div class="input-style-1 form-group">
+				<label>Téléphone</label>
+				<input type="tel" name="phone" placeholder="Téléphone du Client" required=""/>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<button type="submit" class="main-btn primary-btn btn-hover">
+				Ajouter
+				<i class='bx bxs-add-to-queue'></i>
+			</button>
+		</div>
+	</div>
+</form>

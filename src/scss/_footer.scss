@@ -1,0 +1,23 @@
+footer {
+  position  : fixed;
+  right     : 0;
+  bottom    : 0;
+  width     : calc(100% - 250px);
+  background: var(--body-bg);
+
+  .byniwee-svg {
+    .cls-1 {
+      fill: $primary;
+    }
+
+    .cls-2,
+    .cls-3 {
+      fill: var(--body-color);
+    }
+
+    .cls-3 {
+      stroke           : var(--body-color);
+      stroke-miterlimit: 10;
+    }
+  }
+}
